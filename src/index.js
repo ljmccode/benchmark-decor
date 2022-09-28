@@ -7,8 +7,6 @@ import { FilterProvider } from './context/filter_context';
 import { CartProvider } from './context/cart_context';
 import { UserProvider } from './context/user_context';
 import { Auth0Provider } from '@auth0/auth0-react';
-// dev - i6aqggen.us.auth0.com;
-// vkoIBnkP512xCUmsWp8GXmktxxPy2fWI;
 
 ReactDOM.render(
   <Auth0Provider
