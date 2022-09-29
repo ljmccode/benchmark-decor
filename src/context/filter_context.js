@@ -9,6 +9,7 @@ import {
   UPDATE_FILTERS,
   FILTER_PRODUCTS,
   CLEAR_FILTERS,
+  TOGGLE_FILTER_MODAL,
 } from '../actions';
 import { useProductsContext } from './products_context';
 
@@ -27,6 +28,7 @@ const initialState = {
     price: 0,
     shipping: false,
   },
+  showFilterModal: false,
 };
 
 const FilterContext = createContext();
@@ -78,6 +80,10 @@ export const FilterProvider = ({ children }) => {
     dispatch({ type: CLEAR_FILTERS });
   };
 
+  const toggleFilterModal = () => {
+    dispatch({ type: TOGGLE_FILTER_MODAL });
+  };
+
   return (
     <FilterContext.Provider
       value={{
@@ -87,6 +93,7 @@ export const FilterProvider = ({ children }) => {
         updateSort,
         updateFilters,
         clearFilters,
+        toggleFilterModal,
       }}
     >
       {children}
