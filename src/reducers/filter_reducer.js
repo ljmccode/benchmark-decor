@@ -7,6 +7,7 @@ import {
   UPDATE_FILTERS,
   FILTER_PRODUCTS,
   CLEAR_FILTERS,
+  TOGGLE_FILTER_MODAL,
 } from '../actions';
 
 const filter_reducer = (state, action) => {
@@ -115,6 +116,12 @@ const filter_reducer = (state, action) => {
         price: state.filters.max_price,
         shipping: false,
       },
+    };
+  }
+  if (action.type === TOGGLE_FILTER_MODAL) {
+    return {
+      ...state,
+      showFilterModal: !state.showFilterModal,
     };
   }
   throw new Error(`No Matching "${action.type}" - action type`);
