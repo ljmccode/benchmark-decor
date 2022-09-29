@@ -22,9 +22,10 @@ const Wrapper = styled.section`
   .products-container {
     display: grid;
     gap: 2rem 1.5rem;
+    /* justify-content: center; */
   }
 
-  @media (min-width: 992px) {
+  @media (min-width: 500px) {
     .products-container {
       grid-template-columns: repeat(2, 1fr);
     }
