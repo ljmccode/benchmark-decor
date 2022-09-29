@@ -121,7 +121,11 @@ const CheckoutForm = () => {
         )}
         <p className={succeeded ? 'result-message' : 'result-message hidden'}>
           Payment succeeded, see the result in your{' '}
-          <a href={`https://dashboard.stripe.com/test/payments`}>
+          <a
+            href={`https://dashboard.stripe.com/test/payments`}
+            target='_blank'
+            rel='noreferrer'
+          >
             Stripe dashboard.
           </a>
         </p>
