@@ -3,11 +3,11 @@ import styled from 'styled-components';
 import { useFilterContext } from '../context/filter_context';
 import { getUniqueValues, formatPrice } from '../utils/helpers';
 import { FaCheck } from 'react-icons/fa';
+import Search from './Search';
 
 const Filters = () => {
   const {
     filters: {
-      text,
       category,
       company,
       color,
@@ -19,6 +19,7 @@ const Filters = () => {
     updateFilters,
     clearFilters,
     all_products,
+    showFilterModal,
   } = useFilterContext();
 
   const categories = getUniqueValues(all_products, 'category');
@@ -29,18 +30,7 @@ const Filters = () => {
     <Wrapper>
       <div className='content'>
         <form onSubmit={(e) => e.preventDefault()}>
-          {/* search input */}
-          <div className='form-control'>
-            <input
-              type='text'
-              name='text'
-              placeholder='search'
-              className='search-input'
-              value={text}
-              onChange={updateFilters}
-            />
-          </div>
-          {/* end of search input */}
+          {!showFilterModal && <Search />}
           {/* categories */}
           <div className='form-control'>
             <h5>category</h5>
@@ -161,16 +151,6 @@ const Wrapper = styled.section`
     h5 {
       margin-bottom: 0.5rem;
     }
-  }
-  .search-input {
-    padding: 0.5rem;
-    background: var(--clr-grey-10);
-    border-radius: var(--radius);
-    border-color: transparent;
-    letter-spacing: var(--spacing);
-  }
-  .search-input::placeholder {
-    text-transform: capitalize;
   }
 
   button {
