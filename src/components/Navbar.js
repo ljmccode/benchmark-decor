@@ -17,7 +17,10 @@ const Nav = () => {
       <div className='nav-center'>
         <div className='nav-header'>
           <Link to='/'>
-            <img src={logo} alt='benchmark decor' />
+            <div className='logo'>
+              <h4>Benchmark </h4> <img src={logo} alt='benchmark decor' />
+              <h4>Decor</h4>
+            </div>
           </Link>
           <button type='button' className='nav-toggle' onClick={openSidebar}>
             <FaBars />
@@ -61,7 +64,7 @@ const NavContainer = styled.nav`
     justify-content: space-between;
     img {
       width: 80px;
-      margin-left: -15px;
+      /* margin-left: -15px; */
     }
   }
   .nav-toggle {
@@ -78,6 +81,15 @@ const NavContainer = styled.nav`
   }
   .cart-btn-wrapper {
     display: none;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    margin-left: -15px;
+    h4 {
+      color: var(--clr-primary-2);
+      margin-bottom: 0;
+    }
   }
   @media (min-width: 992px) {
     .nav-toggle {
