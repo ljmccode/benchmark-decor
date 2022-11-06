@@ -18,6 +18,7 @@ const FilterModal = () => {
             <button
               type='button'
               className='close-btn'
+              aria-label='close modal'
               onClick={toggleFilterModal}
             >
               <FaTimes />

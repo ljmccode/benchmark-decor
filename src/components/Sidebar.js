@@ -18,7 +18,12 @@ const Sidebar = () => {
       >
         <div className='sidebar-header'>
           <img src={logo} className='logo' alt='benchmark decor' />
-          <button className='close-btn' type='button' onClick={closeSidebar}>
+          <button
+            className='close-btn'
+            type='button'
+            aria-label='close sidebar'
+            onClick={closeSidebar}
+          >
             <FaTimes />
           </button>
         </div>

@@ -18,6 +18,7 @@ const Sort = () => {
           type='button'
           className={`${grid_view === true ? 'active' : null}`}
           onClick={setGridView}
+          aria-label='grid view'
         >
           <BsFillGridFill />
         </button>
@@ -25,6 +26,7 @@ const Sort = () => {
           type='button'
           className={`${!grid_view === true ? 'active' : null}`}
           onClick={setListView}
+          aria-label='list view'
         >
           <BsList />
         </button>

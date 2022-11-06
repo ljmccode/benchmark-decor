@@ -13,7 +13,12 @@ const CartButtons = () => {
 
   return (
     <Wrapper className='cart-btn-wrapper'>
-      <Link to='/cart' className='cart-btn' onClick={closeSidebar}>
+      <Link
+        to='/cart'
+        className='cart-btn'
+        aria-label='open cart'
+        onClick={closeSidebar}
+      >
         Cart
         <span className='cart-container'>
           <FaShoppingCart />

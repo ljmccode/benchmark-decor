@@ -60,6 +60,7 @@ const AddToCart = ({ product }) => {
         <Link
           to='/cart'
           className='btn'
+          aria-label='add item to cart'
           onClick={() => addToCart(id, mainColor, amount, product)}
         >
           add to cart
