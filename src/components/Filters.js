@@ -77,6 +77,7 @@ const Filters = () => {
             <h5>colors</h5>
             <div className='colors'>
               {colors.map((c, index) => {
+                console.log(c);
                 if (c === 'all') {
                   return (
                     <button
@@ -84,6 +85,7 @@ const Filters = () => {
                       name='color'
                       onClick={updateFilters}
                       data-color='all'
+                      aria-label={`color ${c}`}
                       className={`${
                         color === 'all' ? 'all-btn active' : 'all-btn'
                       }`}
@@ -162,7 +164,7 @@ const Wrapper = styled.section`
     border: none;
     border-bottom: 1px solid transparent;
     letter-spacing: var(--spacing);
-    color: var(--clr-grey-5);
+    color: var(--clr-grey-4);
     cursor: pointer;
   }
   .active {

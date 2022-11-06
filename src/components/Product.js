@@ -9,7 +9,11 @@ const Product = ({ image, name, price, id }) => {
     <Wrapper>
       <div className='container'>
         <img src={image} alt='name' />
-        <Link to={`/products/${id}`} className='link'>
+        <Link
+          to={`/products/${id}`}
+          className='link'
+          aria-label='read more about product'
+        >
           <FaSearch />
         </Link>
       </div>
@@ -73,7 +77,7 @@ const Wrapper = styled.article`
   }
 
   footer p {
-    color: var(--clr-primary-5);
+    color: var(--clr-primary-4);
     letter-spacing: var(--spacing);
   }
 `;

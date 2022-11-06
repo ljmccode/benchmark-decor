@@ -16,13 +16,18 @@ const Nav = () => {
     <NavContainer>
       <div className='nav-center'>
         <div className='nav-header'>
-          <Link to='/'>
+          <Link to='/' aria-label='go to homepage'>
             <div className='logo'>
               <h4>Benchmark </h4> <img src={logo} alt='benchmark decor' />
               <h4>Decor</h4>
             </div>
           </Link>
-          <button type='button' className='nav-toggle' onClick={openSidebar}>
+          <button
+            type='button'
+            className='nav-toggle'
+            aria-label='toggle nav'
+            onClick={openSidebar}
+          >
             <FaBars />
           </button>
         </div>
